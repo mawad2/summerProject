@@ -233,11 +233,12 @@ public class Ebay {
             }
 
             System.out.println("We are in the RIGHT EMAIL ADDRESS");
-
-            WebElement insideEmail = driver.findElement(By.xpath("//*[@id=\":k8\"]/div[1]/div[2]/div[1]/table/tbody/tr[1]/td[4]/div[1]"));
+            Thread.sleep(1000);
+            WebElement insideEmail = driver.findElement(By.cssSelector(".acX .aaq, .acX .bsQ"));
             //driver.findElement(By.xpath("//*[@id=\":k8\"]/div[1]/div[2]/div[1]/table/tbody/tr[1]/td[4]/div[1]")).click();
-            //insideEmail
-
+            insideEmail.click();
+            //insideEmail.sendKeys("This is a test");
+            driver.findElement(By.cssSelector(".aO7")).sendKeys("We made it");
 
 
         } catch (InterruptedException ex) {
